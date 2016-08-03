@@ -1,0 +1,310 @@
+html { 
+  background: url(images/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#signOut{display:none;position:absolute;width:auto;border:1px solid #fff;z-index:99999999999999;padding:5px;background-image: rgba(255, 255, 255, 0.2);cursor:pointer}
+/*
+#bgImage{ background: url(images/bg.jpg) no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;
+  -o-background-size: cover; background-size: cover;-webkit-filter: blur(5px); -moz-filter: blur(5px);  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px); width:100%;height:456px;position:absolute;left:0;z-index:-1;opacity:0.3;}*/
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary {display: block;}
+fieldset,body,ul,li{border: 0 none;margin: 0;padding: 0;font-size:12px;font-family: 'Roboto', serif;}
+.header{background:#09070a; clear:both;opacity:0.6;padding:5px 20px;color:#fff;}
+#welcomeText{font-weight:bold}
+.welcomeMsg{padding-top:4px}
+#view_list{float:left}
+#view_list_Sel{float:left;display:none;height:21px;width:26px;}
+#proPic{padding-left:20px; }
+#proPic img{height:21px; width:22px;border-radius: 50%;}
+.lft{float:left}
+.rgt{float:right}
+.logo{ float:left;width:auto;padding-left:20px;text-shadow: 4px 4px 4px #aaa;font-size:15px;}
+.clearfix{clear: both;content: ".";display: block;font-size: 0;height: 0;line-height: 0;visibility: hidden;}
+
+.videoPlayer{width:95%;margin:0 auto;}
+#player{}
+#player .full-frame{padding-top:1%}
+#sideMenu{top:-500000px;position:absolute;left:-20000px;  background-color: rgba(255, 255, 255, 0.2);z-index:99999;width:26%;}
+#sideMenu > div:first-child{padding:0 20px 20px}
+/*******Video Controls**********/
+#controls{width:96%;padding:0 2%}
+.drgPlay{right:0px;bottom:0px; position:absolute;/*background:#000;opacity:0.8;*/z-index:9999;width:100%; background-color: rgba(0, 0, 0, 0.8)}
+.cntrlIcon{padding-right:25px;padding-top:24px;cursor:pointer}
+.divider{padding-right:30px;}
+#currentThumnail{padding-top:7px;width:25%;padding-right:5%}
+#seekbar{width:20%;}
+#songTitle{color:#fff;font-weight:bold;overflow:hidden;width:70%;padding-top:2px}
+#seek{width:100%;margin-top:28px;}
+.durationTime{color:#fff;padding-top:22px;padding-left:5px}
+@-moz-document url-prefix() {.cntrlIcon{padding-right:15px;padding-top:24px;cursor:pointer}
+.divider{padding-right:18px;}
+#seekbar{width:31%;padding-right:18px}
+}
+#volume{display:none;width:60px;position:absolute;left:-11%;top:-30%;-webkit-transform: rotate(270deg);-moz-transform: rotate(270deg)}
+@-moz-document url-prefix() {#volume{left:-30%;} }
+#drpArea{width:none;width:99%;padding:0 0.5%;display:none}
+#noRecord{border-width:1px;border-style:dashed;border-color:#fff;width:80%;text-align:center;padding:10px;margin:0 auto;}
+#openDrp{position:absolute;top:0;right:0}
+.imgRotate{-moz-transform:rotate(180deg);-webkit-transform:rotate(180deg)}
+input[type='range'] {
+	-webkit-appearance: none;
+	border-radius: 2px;
+	box-shadow: inset 0 0 5px #333;
+	background-color: #00f6ff;
+	height: 5px;
+	vertical-align: middle;
+}
+input[type='range']::-moz-range-track {
+	 -moz-appearance: none;
+	 border-radius: 5px;
+	 box-shadow: inset 0 0 5px #333;
+	 background-color: #00f6ff;
+	 height: 5px;
+}
+input[type='range']::-webkit-slider-thumb {
+	 -webkit-appearance: none !important;
+	 border-radius: 10px;
+	 background-color: #FFF;
+	 /*box-shadow:inset 0 0 10px rgba(000,000,000,0.5);*/
+	 
+	 height: 10px;
+	 width: 10px;
+}
+input[type='range']::-moz-range-thumb {
+	 -moz-appearance: none;
+	 border-radius: 10px;
+	 background-color: #FFF;
+	 /*border: 1px solid #999;*/
+	 height: 10px;
+	 width: 10px;
+}
+
+/*******End Video Controls**********/
+/******Side Menu**********/
+.grpTitle{color:#F9B03D;padding:20px 0 10px 0;font-weight:bold;font-size:15px}
+.musicList li {display: list-item;cursor:pointer;width:100%;color:#fff}
+.musicList li img{float:left;width:25%;padding:10px 0;height:52px;padding:5px 0}
+.musicList li .title{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:74%;padding:10px 0.5%}
+.musicList li .innerDiv:hover{color:#00f6ff}
+.musicList ul{list-style: none outside none}
+.musicList{border-bottom:1px solid #959595;max-height:250px;overflow-y:auto;padding-bottom: 5px;}
+.musicList li:after{clear:both}
+
+/*******End Side Menu******/
+/***********drag Area*************/
+#drpArea img{border-color:#000;border-style:solid;border-width:0 1px;width:52px; height:52px}
+.imgSet{height:30px !important;width:30px !important}
+/*********End Area*************/
+/***Comment***/
+ .commentBox{position :absolute; top:100px; width:100%; z-index:99999999; background-color:rgba(0, 0, 0, 0.7); display: none;color:#fff}
+.input[type="text"], .imgDescription textarea {
+    background: linear-gradient(#F0F0F0, #F5F5F5) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #D6D3CE;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.12) inset;
+    box-sizing: border-box;
+    color: #333333;
+    font-size: 14px;
+    padding: 7px;
+    width: 95%;
+}
+.uploaderDetails .imgDescription, .commenters .imgDescription, .userProf .imgDescription {
+    color: #171717;
+    float: left;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 0;
+    max-width: 600px;
+    width: 80%;
+}
+/*****End Comment***/
+/******Mood*****/
+.dropOut .triangle {
+    border-top: 8px solid #FFFFFF;
+    border-left: 8px solid rgba(0, 0, 0, 0);
+    border-right: 8px solid rgba(0, 0, 0, 0);
+    height: 0;
+    left: 50%;
+    margin-left: -8px;
+    position: absolute;
+    bottom: -8px;
+    width: 0;
+}
+.dropdownContain img:hover{width:32px;height:32px}
+.dropdownContain img{float:left;width:auto;padding:2px 5px}
+.dropdownContain{
+padding:5px;
+background-image: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    //box-border: 2px 2px 2px #FFF;
+	border:1px solid #fff;
+    margin-left: -80px;
+    position: absolute;
+    top:-30px;
+    
+   
+    width: auto;
+    z-index: 99999999;
+    cursor:pointer;
+
+}
+.playingInfo{width:19%}
+
+/******End******/
+/***********device Completable******/
+@media only screen 
+and (max-width : 2000px) {
+.playingInfo{position:none;}
+
+}
+@media only screen 
+and (max-width : 1160px) {
+#seekbar{width:15%;}
+@-moz-document url-prefix() {.cntrlIcon{padding-right:15px;padding-top:24px;cursor:pointer}
+.divider{padding-right:15px;}
+#seekbar{width:25%;padding-right:18px}		
+}
+.divider{padding-right:15px;}
+}
+@media only screen and (max-width : 994px){
+#seekbar{width:14%;padding-right:16px}
+
+.divider{padding-right:5px;}	
+.cntrlIcon{padding-right:8px;padding-top:24px;cursor:pointer}
+@-moz-document url-prefix() {
+.cntrlIcon{padding-right:8px;padding-top:24px;cursor:pointer}
+.divider{padding-right:5px;}
+#seekbar{width:18%;padding-right:12px}
+body{font:11px}
+}
+}
+@media only screen and (max-width : 700px){
+#seekbar{width:14%;padding-right:16px}
+body{font:10px}
+.divider{padding-right:5px;}	
+.cntrlIcon{padding-right:5px;padding-top:18px;cursor:pointer}
+@-moz-document url-prefix() {
+.cntrlIcon{padding-right:5px;padding-top:18px;cursor:pointer}
+.divider{padding-right:5px;}
+#seekbar{width:14%;padding-right:16px}
+
+}
+
+.dividerDiv{height:52px} 
+#play{width:42px;height:42px}
+#previous,#rewind{width:16px;height:16px}
+#songTitle{height:52px}
+}
+@media screen and (max-width: 560px) {
+	
+#seekbar{width:25%;padding-right:16px}
+.playingInfo{position:absolute;top:-85%;width:50%;left:0}
+body{font-size:8px};
+.divider{padding-right:5px;}	
+.cntrlIcon{padding-right:5px;padding-top:14px;cursor:pointer}
+@-moz-document url-prefix() {
+.cntrlIcon{padding-right:5px;padding-top:14px;cursor:pointer}
+.divider{padding-right:5px;}
+#seekbar{width:25%;padding-right:16px}
+
+}
+.socialNet{float:right}
+.socialNet{font-size:11px}
+.dividerDiv{height:52px} 
+#play{width:32px;height:32px}
+#previous,#rewind{width:16px;height:16px}
+#songTitle{height:52px}
+#view_list{height:12px;width:12px}
+#view_list_Sel{height:12px;width:12px}
+.dividerDiv{height:15px}
+#openDrp{height:10px;width:10px}
+
+}
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {}
+@media only screen 
+and (max-width : 480px) {
+
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (max-width : 480px) {
+#seekbar{width:25%;padding-right:16px}
+.playingInfo{position:absolute;top:-95%;width:50%;left:0}
+body{font-size:8px};
+.divider{padding-right:5px;}	
+.cntrlIcon{padding-right:5px;padding-top:18px;cursor:pointer}
+@-moz-document url-prefix() {
+.cntrlIcon{padding-right:5px;padding-top:18px;cursor:pointer}
+.divider{padding-right:5px;}
+#seekbar{width:25%;padding-right:16px}
+
+}
+.socialNet{float:right}
+.socialNet{font-size:11px}
+.dividerDiv{height:52px} 
+#play{width:42px;height:42px}
+#previous,#rewind{width:16px;height:16px}
+#songTitle{height:52px}
+.dividerDiv{height:15px}
+#sideMenu{width:84%}
+.drgPlay{width:100% !important}
+.dropdownContain img{width:100%}
+.dropdownContain {width:24px;top:-120%}
+}
+@media only screen 
+and (max-width : 321px) {
+/* Styles */
+#seekbar{width:25%;padding-right:16px}
+.playingInfo{position:absolute;top:-85%;width:50%;left:0}
+body{font-size:8px};
+.divider{padding-right:5px;}	
+.cntrlIcon{padding-right:5px;padding-top:14px;cursor:pointer}
+@-moz-document url-prefix() {
+.cntrlIcon{padding-right:5px;padding-top:14px;cursor:pointer}
+.divider{padding-right:5px;}
+#seekbar{width:25%;padding-right:16px}
+
+}
+.socialNet{float:right}
+.socialNet{font-size:11px}
+.dividerDiv{height:52px} 
+#play{width:32px;height:32px}
+#previous,#rewind{width:16px;height:16px}
+#songTitle{height:52px}
+#view_list{height:12px;width:12px}
+#view_list_Sel{height:12px;width:12px}
+.dividerDiv{height:15px}
+#sideMenu{width:84%}
+}
+@media only screen 
+and (max-width : 321px) {
+/*
+.header{padding:5px 8px; font-size:10px}
+.playingInfo{position:absolute;top:-85%;width:50%;left:0}		
+.dividerDiv{height:32px} 
+#play{width:32px;height:32px}
+#previous,#rewind{width:12px;height:12px}
+#songTitle{height:32px}
+#openDrp{height:12px;width:12px}
+.cntrlIcon{padding-right:5px;padding-top:14px;cursor:pointer}*/	
+}
+
+
+
+
+
+
+/*************End*******************/
+
+
+

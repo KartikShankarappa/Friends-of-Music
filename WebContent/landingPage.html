@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Droid+Sans+TV' rel='stylesheet' type='text/css'>
+    <link type='text/css' href='index.css' rel='stylesheet'> -->
+	<meta charset="utf-8">
+    <title>Friends of music</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:300">
+	<link rel="stylesheet" type="text/css" href="css/common.css"></link>	
+    <!--<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'></script>-->
+	<!-- <script  src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> --><!-- Google CDN jQuery with fallback to local -->
+	<script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>!window.jQuery && document.write(unescape('%3Cscript src="js/scroll/minified/jquery-1.9.1.min.js"%3E%3C/script%3E'))</script>
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<!-- Custom scrollbars CSS -->
+	<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+	<script src="jquery-ui-1.9.0.custom.min.js"></script>
+    <script type='text/javascript' src='js/index.js'></script>
+	
+  </head>
+  <body>
+ 	<!-- <div id="bgImage"></div> -->
+	<!--Start of header -->
+		<header class="header">
+			<img id="view_list" src="img/view-list.png"/>
+			<img id="view_list_Sel" src="img/selViewList.png"/>
+			<div class="logo">
+				Friends of music
+			</div>
+			<div id="proPic" class="rgt"><img src="img/default.jpe"/></div>
+			<div class="rgt welcomeMsg" ><span id="welcomeText">Hi,</span> <span id="userName">Jenny Willow</span></div>
+			
+			<div class="clearfix"></div>
+			
+		</header>
+	<!--End of header -->
+	<!--Start of content-->
+		<div>
+			<div class="videoPlayer">
+				<div id="player"></div>
+				
+			
+			
+			
+			
+			</div>
+			
+	
+		</div>
+	<!--End of Content-->
+	<!--Start of drag-able play area-->
+		<div class="drgPlay">
+			<div id="controls">
+			<!--Minimum player control-->
+				<div class="lft">
+					<img src="img/rewind.png" class="lft cntrlIcon"id="previous"/>
+					<img id="play" src="img/pause.png" class="lft cntrlIcon" style="padding-top:5px"/>
+					<img src="img/forward.png" id="next" class="lft cntrlIcon"/>
+				</div>
+			<!--End Minimum player control-->
+			
+				<img src="img/playerDivider.png" class="lft divider"/>
+			<!--Advance player control-->
+				<div class="lft" style="position:relative">
+					
+					<input type='range' id='volume' title="Volume" min='0' max='100' step='1' value='100'></input>
+					<img id="volIcon" src="img/volume.png" class="lft cntrlIcon"/>
+					
+					<img src="img/repeat.png" class="lft cntrlIcon"/>
+					<img src="img/shuffle.png" class="lft cntrlIcon"/>
+				</div>
+			<!--End of Advance player control-->
+				<img src="img/playerDivider.png" class="lft divider"/>
+			<!-- Album info-->
+				<div class="lft" style="width:20%">
+					<div class="lft" id="currentThumnail">
+						<img src="" height="52px" width="100%"/>
+					</div>
+					<div class="lft" id="songTitle">
+					tittle
+					</div>
+				</div>
+			<!--End of Album Indo-->
+			<!--Start of seekbar-->
+				<div class="lft" style="width:24%" id="seekbar" >
+					
+						<input class="lft" type='range' id='seek' title="Seek" min='0' max='0' step='1' value='0'></input>
+					
+			
+					
+				</div>
+				<div class="durationTime lft cntrlIcon">
+						<span id='currentTime'>0:00</span> / <span id='duration'>0:00</span>
+				</div>
+		<!--Start of seekbar-->
+				<img src="img/playerDivider.png" class="lft divider"/>
+			<!--Start of Social media-->
+				<div class="lft socialNet">
+					<img src="img/like.png" class="lft cntrlIcon"/>
+					<img src="img/comments.png" class="lft cntrlIcon"/>
+					<img src="img/share.png" class="lft cntrlIcon"/>
+					<img src="img/mood.png" class="lft cntrlIcon"/>
+					<img src="img/openplayList.png" id="openDrp"/>
+				</div>
+			<!--End of Social media-->
+				<div class="clearfix"></div>
+				
+			</div>
+			<div id="drpArea"style="color:#fff">
+				<div id="noRecord">Please Drop Here</div>
+			
+			</div>
+		</div>
+	<!--End of drag-able play area-->
+	<!--Start of side menu-->
+		<div id="sideMenu">
+		<div>
+		<!--Mood Based Songs -->
+			<div>
+				<div class="grpTitle">News Feeds</div>
+				<div class="musicList">
+					<ul id="moodSongs">
+					</ul>
+					
+				</div>
+			</div>
+		<!--End of Mood Based Songs -->
+		<!--Top Trending Songs-->
+			<div>
+				<div class="grpTitle">Trending Songs </div>
+				<div class="musicList">
+					<ul id="trendSongs">
+						
+						
+					</ul>
+				</div>
+			</div>
+		<!--End of Top Trending Songs-->
+		</div>
+		</div>
+	
+	<!--End of side menu-->
+	<script>
+	(function($){
+			$(window).load(function(){
+				$(".musicList").mCustomScrollbar({
+					autoHideScrollbar:true,
+					theme:"light-thin"
+				});
+				//$("#sideMenu").hide();
+			});
+		})(jQuery);
+	
+		
+	</script>
+	</body>
+</html>
